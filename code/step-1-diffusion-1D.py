@@ -33,4 +33,7 @@ for n in range(nt):  	# Iterates nt times
         u[i] = un[i] + nu * dt / dx**2 * (un[i+1] - 2 * un[i] + un[i-1])		
 
 plt.plot(numpy.linspace(0, 2, nx), u)
+plt.xlabel('$x$')
+plt.ylabel('$u$')
+plt.title('1D Diffusion at t=0')
 plt.show()
