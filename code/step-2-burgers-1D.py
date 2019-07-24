@@ -29,7 +29,6 @@ un = numpy.empty(nx)
 t = 0
 
 u = numpy.asarray([ufunc(t, x0, nu) for x0 in x])
-# print(u)
 
 # Analytical solution
 for n in range(nt):
