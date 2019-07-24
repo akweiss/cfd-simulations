@@ -1,4 +1,15 @@
-# STEP ONE: Diffusion equation in one dimension.
+"""
+STEP ONE: Diffusion equation in one dimension.
+
+The diffusion equation in one dimension is:
+	du/dt = v * d^2u/dx^2
+
+We need to discretize this second-order derivative using a central difference scheme, 
+then solve for the unknown, u(^n+1)_i. In this case,
+	u(^n+1)_(i) = u(^n)_i + ((v * del * t) / (del * x^2)) * (u(^n)_(i+1) - 2u(^n)_i + u(^n)_(i-1))
+
+Then we apply this to our solver.
+"""
 
 import numpy
 import matplotlib.pyplot as plt
@@ -9,15 +20,6 @@ nt = 20    					# Number of timesteps
 nu = 0.3   					# Viscosity
 sigma = .2 					
 dt = sigma * dx**2 / nu 	# Amount of time each timestep covers
-
-# Auxilary variables for difference formulas
-for i in 1:nx:
-	ip1(i) = i+1
-	im1(i) = i-1
-	x(i) = (i-1)*dx
-ip1(nx) = 1
-im1(1) = nx
-
 
 u = numpy.ones(nx)      # All elements are 1
 u[int(.5 / dx):int(1 / dx + 1)] = 2  # u = 2 between 0.5 and 1, per initial conditions
