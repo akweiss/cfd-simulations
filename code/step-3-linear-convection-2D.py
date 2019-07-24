@@ -75,4 +75,8 @@ for n in range(nt + 1):
 fig = plt.figure(figsize=(11, 7), dpi=100)
 ax = fig.gca(projection='3d')
 surf2 = ax.plot_surface(X, Y, u, cmap=cm.plasma)
+ax.set_zlabel('$u$')
+ax.set_xlabel('$x$')
+ax.set_ylabel('$y$')
+ax.text2D(0.3, 0.95, 'Linear Convection in 2D at t=10', transform=ax.transAxes)
 plt.show()
