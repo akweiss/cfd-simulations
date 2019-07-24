@@ -152,7 +152,7 @@ plt.colorbar()
 plt.contour(X, Y, p, cmap=cm.plasma)
 plt.quiver(X[::2, ::2], Y[::2, ::2], u[::2, ::2], v[::2, ::2]) 
 plt.xlabel('X')
-plt.ylabel('Y');
+plt.ylabel('Y')
 
 # We can also visualize with a streamplot
 fig = plt.figure(figsize=(11, 7), dpi=100)
@@ -161,5 +161,6 @@ plt.colorbar()
 plt.contour(X, Y, p, cmap=cm.plasma)
 plt.streamplot(X, Y, u, v)
 plt.xlabel('X')
-plt.ylabel('Y');
+plt.ylabel('Y')
+plt.title('Cavity Flow with Lid at t=1')
 plt.show()
