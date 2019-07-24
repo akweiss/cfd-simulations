@@ -30,5 +30,5 @@ I am definitely most proud of the above diffusion animation, and if I were to co
 ![](/images/step-10-channel-navier-stokes.png)
 
 ## References
-* http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/ml
+* http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes
 * https://github.com/barbagroup/CFDPython
