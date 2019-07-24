@@ -70,9 +70,9 @@ def diffuse(nt):
         linewidth=0, antialiased=True)
     ax.set_zlim(1, 2.5)
     ax.set_xlabel('$x$')
-    ax.set_ylabel('$y$');
+    ax.set_ylabel('$y$')
+    ax.set_zlabel('$u$')
+    ax.text2D(0.32, 0.95, '2D Diffusion at t=5', transform = ax.transAxes)
     plt.show()
 
-
 diffuse(5)
-
