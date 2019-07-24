@@ -93,5 +93,7 @@ ax = fig.gca(projection='3d')
 surf = ax.plot_surface(X, Y, u, rstride=1, cstride=1, cmap=cm.plasma, linewidth=0, antialiased=True)
 ax.set_zlim(1, 2.5)
 ax.set_xlabel('$x$')
-ax.set_ylabel('$y$');
+ax.set_ylabel('$y$')
+ax.set_zlabel('$u$')
+ax.text2D(0.22, 0.95, 'Burgers\' Equation at t = 10, u Velocity', transform = ax.transAxes)
 plt.show()
