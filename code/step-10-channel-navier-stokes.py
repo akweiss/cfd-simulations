@@ -199,4 +199,7 @@ while udiff > .001:
 # Plot the results
 fig = plt.figure(figsize = (11,7), dpi=100)
 plt.quiver(X[::3, ::3], Y[::3, ::3], u[::3, ::3], v[::3, ::3])
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Channel Flow with Periodic Boundary Conditions')
 plt.show()
