@@ -43,7 +43,9 @@ def plot2d(x, y, p):
 	ax.set_ylim(0, 2)
 	ax.view_init(30, 225)
 	ax.set_xlabel('$x$')
-	ax.set_ylabel('$y$');
+	ax.set_ylabel('$y$')
+	ax.set_zlabel('$p$')
+	ax.text2D(0.30, 0.98, "2D Laplace Equation", transform = ax.transAxes)
 	plt.show()
 
 
