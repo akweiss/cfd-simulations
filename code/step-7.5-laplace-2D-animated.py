@@ -1,3 +1,8 @@
+"""
+Very similar to what I did in step 5.5 with the 2D diffusion example, 
+but this time with the Laplace equation.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
