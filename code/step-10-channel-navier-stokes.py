@@ -79,7 +79,6 @@ b = np.zeros((ny,nx))
 # We'll use two functions to break up the calculations of the pressure Poisson equation, for the sake of clarity and managing errors.
 
 # The first function deals with the second half of the equation, accounting for the periodic boundary conditions at x = 0, 2
-
 def build_up(rho, dt, dx, dy, u, v):
 	b = np.zeros_like(u)
 	b[1:-1, 1:-1] = (rho * (1 / dt * ((u[1:-1, 2:] - u[1:-1, 0:-2]) / (2 * dx) + (v[2:, 1:-1] - v[0:-2, 1:-1]) / (2 * dy)) 
@@ -101,7 +100,6 @@ def build_up(rho, dt, dx, dy, u, v):
 	return b
 
 # The second function handles the remainder of the Poisson equation, the periodic boundary conditions, and wall boundaries
-
 def poisson(p, dx, dy):
     pn = np.empty_like(p)
     
@@ -136,7 +134,6 @@ def poisson(p, dx, dy):
 # between two consecutive steps is very small.
 
 udiff = 1
-stepcount = 0
 
 while udiff > .001:
 	un = u.copy()
@@ -193,7 +190,6 @@ while udiff > .001:
 	v[-1, :]=0
     
 	udiff = (np.sum(u) - np.sum(un)) / np.sum(u)
-	stepcount += 1
 
 
 # Plot the results
